@@ -28,4 +28,16 @@ export const GlobalStyle = createGlobalStyle`
         list-style: none;
         color: inherit;
     }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 15px;
+    }
 `
