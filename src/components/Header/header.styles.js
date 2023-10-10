@@ -2,18 +2,18 @@ import styled from "styled-components"
 
 export const StylesHeader = styled.header`
     .nav-bar {
-        background-color: #FF8811; //mudar pro props puxando do tema
+        background-color: ${(props) => props.theme.orange}; 
         padding: 2%;
     }
 
     .nav-button {
         border: none;
-        background-color: #FF8811;
+        background-color: ${(props) => props.theme.orange};
     }
 
     .search-bar {
-        background-color: #FFFFFF;
-        border: #000000 solid 2px;
+        background-color: ${(props) => props.theme.white};
+        border: black solid 2px;
         border-radius: 12px;
         padding: 20px;
         width: 30%;
@@ -22,7 +22,7 @@ export const StylesHeader = styled.header`
     }
     .search-button {
         border: none;
-        background-color: #FFFFFF;
+        background-color: ${(props) => props.theme.white};
     }
 
     .nav-bar, .search-bar {
