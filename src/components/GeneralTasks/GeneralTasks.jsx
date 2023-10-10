@@ -1,36 +1,51 @@
-import React from 'react'
-import {StylesGeneralTasks} from './generalTasks.styles'
-import circleDashed from '/circle-dashed.svg'
-import playCicle from '/play-circle.svg'
-import checkCircle from '/check-circle.svg'
+import React from "react";
+import { StylesGeneralTasks } from "./generalTasks.styles";
+import circleDashed from "/circle-dashed.svg";
+import playCicle from "/play-circle.svg";
+import checkCircle from "/check-circle.svg";
+import threeDots from "/dots-three-circle.svg"
 
 const GeneralTasks = () => {
-    return (
-        <StylesGeneralTasks>
-            <section>
-                <h1>Tarefas Gerais</h1>
-                <div className={section}>
+  return (
+    <StylesGeneralTasks>
+      <h1>Tarefas Gerais</h1>
+      <section>
+        <div className="task-align">
+          <div className="icon-align">
+            <img src={circleDashed} alt="circulo tracejado" />
+            <h2 className="h2-1"> A fazer</h2>
+          </div>
 
-                    <div className={column}>
-                        <h2>A fazer</h2>
-                        <img src={circleDashed} alt='circulo tracejado'/>
-                    </div>
+          <div className="task">
+            <p>texto texto</p>
+            <button className="more-button">
+                <img src={threeDots} alt="circulo com reticencias em seu interior" />
+            </button>
+          </div>
 
-                    <div>
-                        <h2>Em progresso</h2>
-                        <img src={playCicle} alt='circulo com um sinal de play em seu interior'/>
-                    </div>
+          <button className="add-button">
+            + Adicionar Tarefa
+          </button>
+          
+        </div>
 
-                    <div>
-                        <h2>Finalizado</h2>
-                        <img src={checkCircle} alt='circulo com um sinal de completo em seu interior'/>
-                    </div>
-                
-                </div>
-                
-            </section>
-        </StylesGeneralTasks>
-    )
-}
+        <div className="task-align">
+          <div className="icon-align">
+            <img src={playCicle} alt="circulo com um sinal de play em seu interior"/>
+            <h2 className="h2-2">Em progresso</h2>
+          </div>
+        </div>
 
-export default GeneralTasks
+        <div className="task-align">
+          <div className="icon-align">
+            <img src={checkCircle} alt="circulo com um sinal de completo em seu interior"/>
+            <h2 className="h2-3">Finalizado</h2>
+          </div>
+        </div>
+
+      </section>
+    </StylesGeneralTasks>
+  );
+};
+
+export default GeneralTasks;
