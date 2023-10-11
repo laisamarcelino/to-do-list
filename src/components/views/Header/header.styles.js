@@ -6,24 +6,32 @@ export const StylesHeader = styled.header`
         padding: 2%;
     }
 
-    .nav-button {
-        border: none;
-        background-color: ${(props) => props.theme.orange};
+    .logo {
+        width: 45px;
+    }
+
+    .align-logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    p {
+        color: ${(props) => props.theme.white};
+        font-weight: 1000;
+        font-size: 20px;
     }
 
     .search-bar {
         background-color: ${(props) => props.theme.white};
-        border: solid 2px;
-        border-radius: 12px;
+        border: none;
+        border-radius: 25px;
         padding: 20px;
         width: 30%;
         height: 55px;
         
     }
-    .search-button {
-        border: none;
-        background-color: ${(props) => props.theme.white};
-    }
+   
 
     .nav-bar, .search-bar {
         display: flex;
@@ -34,5 +42,12 @@ export const StylesHeader = styled.header`
     .form {
         border: none;
         font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
     }
+    
+    .search-button {
+        border: none;
+        background-color: ${(props) => props.theme.white};
+    }
+    
 `
