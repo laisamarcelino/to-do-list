@@ -4,8 +4,19 @@ import circleDashed from "/circle-dashed.svg";
 import playCicle from "/play-circle.svg";
 import checkCircle from "/check-circle.svg";
 import threeDots from "/dots-three-circle.svg"
+import { useNavigate } from 'react-router-dom'
 
 const GeneralTasks = () => {
+    const navigate = useNavigate()
+
+    const ButtonAdd = () => {
+      navigate('/AddTask')
+    }
+    
+    const ButtonMore = () => {
+      
+    }
+
   return (
     <StylesGeneralTasks>
       <h1>Tarefas Gerais</h1>
@@ -18,12 +29,20 @@ const GeneralTasks = () => {
 
           <div className="task">
             <p>texto texto</p>
-            <button className="more-button">
+            
+            <div className="dropdown">
+              <button className="more-button" onClick={ButtonMore}>
                 <img src={threeDots} alt="circulo com reticencias em seu interior" />
-            </button>
+              </button>
+              <div>
+                
+              </div>
+
+            </div>
+            
           </div>
 
-          <button className="add-button">
+          <button className="add-button" onClick={ButtonAdd}>
             + Adicionar Tarefa
           </button>
           

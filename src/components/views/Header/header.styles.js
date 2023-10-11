@@ -13,7 +13,7 @@ export const StylesHeader = styled.header`
 
     .search-bar {
         background-color: ${(props) => props.theme.white};
-        border: black solid 2px;
+        border: solid 2px;
         border-radius: 12px;
         padding: 20px;
         width: 30%;

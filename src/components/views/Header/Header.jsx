@@ -1,5 +1,5 @@
 import React from 'react'
-import {StylesHeader} from './header.styles'
+import {StylesHeader} from '../Header/header.styles'
 import icon_list from '/list.svg'
 import icon_search from '/magnifying-glass.svg'
 
