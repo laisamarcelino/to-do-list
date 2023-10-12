@@ -6,7 +6,8 @@ export const ColorTheme = {
     purple: '#9395D3',
     gray: '#5B5555',
     greenLight: '#81DB9E',
-    blackLight: '#231F20'
+    blackLight: '#231F20',
+    grayLight: '#DFD8D8'
 }
 
 //it's a object

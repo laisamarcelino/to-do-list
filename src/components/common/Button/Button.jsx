@@ -3,8 +3,8 @@ import styled from "styled-components";
 const Button = ({ texto, variant, onClick }) => {
   return (
     <>
-      {variant == "done" && <DoneButton onClick={onClick}>{texto} </DoneButton>}
-      {variant == "edit" && <EditButton onClick={onClick}>{texto}</EditButton>}
+      {variant == "primary" && <PrimaryButton onClick={onClick}>{texto} </PrimaryButton>}
+      {variant == "secondary" && <SecondaryButton onClick={onClick}>{texto}</SecondaryButton>}
     </>
   );
 };
@@ -24,9 +24,9 @@ const StyleButton = styled.button`
   height: 55px;
 `;
 
-const DoneButton = styled(StyleButton)`
+const PrimaryButton = styled(StyleButton)`
   background: ${(props) => props.theme.jade};
 `;
-const EditButton = styled(StyleButton)`
-  background: ${(props) => props.theme.gray};
+const SecondaryButton = styled(StyleButton)`
+  background: ${(props) => props.theme.orange};
 `;

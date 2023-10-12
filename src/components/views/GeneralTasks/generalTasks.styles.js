@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const StylesGeneralTasks = styled.section`
     
-    margin: 5%;
+    margin: 10%;
 
     h1 {
         text-align: center;
@@ -12,55 +12,27 @@ export const StylesGeneralTasks = styled.section`
         color: ${(props) => props.theme.blackLight};
     }
 
-    section, .icon-align {
+    section{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
 
-    .task-align {
-        width: 100%;
+    .align-button {
+        display: flex;
+        justify-content: center;
     }
 
-    .icon-align {
-        width: fit-content;
-        gap: 10px;
-        margin-bottom: 20px;
-    }
-
-    .h2-1 {
-        color: ${(props) => props.theme.gray};
-    }
-  
-    .h2-2 {
-        color: ${(props) => props.theme.greenLight};
-    }
-
-    .h2-3 {
-        color: ${(props) => props.theme.jade};
-    }
-
-    .add-button, .task {
+    .add-button {
         border: 2px black solid;
         border-radius: 5px;
         padding: 10px;
-        font-size: 15px;
+        font-size: 20px;
         margin-bottom: 5%;
         font-family: 'Montserrat', sans-serif;
         background-color: transparent;
-        width: 80%;
+        width: 60%;
+        height: 55px;
+        opacity: 0.7;
     }
-
-    .task {
-        position: relative;
-    }
-
-    .more-button {
-        background-color: transparent;
-        border: none;
-        position: absolute;
-        top: 4px;
-        right: 16px;
-    }
-
 `
