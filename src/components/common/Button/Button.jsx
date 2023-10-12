@@ -5,6 +5,7 @@ const Button = ({ texto, variant, onClick }) => {
     <>
       {variant == "primary" && <PrimaryButton onClick={onClick}>{texto} </PrimaryButton>}
       {variant == "secondary" && <SecondaryButton onClick={onClick}>{texto}</SecondaryButton>}
+      {variant == "third" && <ThirdButton onClick={onClick}>{texto}</ThirdButton>}
     </>
   );
 };
@@ -20,8 +21,9 @@ const StyleButton = styled.button`
   font-family: "Montserrat", sans-serif;
   color: ${(props) => props.theme.white};
   background-color: transparent;
-  width: 15%;
+  width: 10%;
   height: 55px;
+  text-align: center;
 `;
 
 const PrimaryButton = styled(StyleButton)`
@@ -29,4 +31,7 @@ const PrimaryButton = styled(StyleButton)`
 `;
 const SecondaryButton = styled(StyleButton)`
   background: ${(props) => props.theme.orange};
+`;
+const ThirdButton = styled(StyleButton)`
+  background: ${(props) => props.theme.red};
 `;
