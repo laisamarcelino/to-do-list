@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from "../../components/views/Header/Header"
-import GeneralTasks from '../../components/views/GeneralTasks/GeneralTasks'
-import DoneTasks from '../../components/views/DoneTasks/DoneTasks'
+import GeneralTasks from '../GeneralTasks/GeneralTasks'
 import Footer from '../../components/views/Footer/Footer'
 
 
@@ -10,7 +9,6 @@ const LandingPage = () => {
         <div>
            <Header/>
            <GeneralTasks/>
-           <DoneTasks/>
            <Footer/>
         </div>
     )
