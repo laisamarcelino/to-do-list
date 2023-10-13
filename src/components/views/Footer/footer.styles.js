@@ -5,7 +5,7 @@ export const StylesFooter = styled.section`
     background-color: ${(props) => props.theme.orange};
     padding: 2%;
     position: absolute;
-    bottom: -1;
+    bottom: 0;
     width: 100%;
 
     .position-footer {
