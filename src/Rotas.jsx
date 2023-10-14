@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AddTask from "./components/views/AddTask/AddTask";
+import AddTask from "./pages/AddTask/AddTask";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import { GlobalStyle } from "./styles/GlobalStyles";
 import { ColorTheme } from "./styles/theme";
