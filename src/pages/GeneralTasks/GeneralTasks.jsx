@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+// GeneralTasks.js
+import React from "react";
 import { StylesGeneralTasks } from "./generalTasks.styles";
 import { useNavigate } from "react-router-dom";
 import { useTaskContext } from "../TaskContent/TaskContent";
@@ -8,9 +9,9 @@ import EditTaskDialog from "../EditTodo/EditTodo";
 
 const GeneralTasks = () => {
   const navigate = useNavigate();
-  const { tasks, deleteTask, doneTask, updateTasks } = useTaskContext();
-  const [isDialogOpen, setDialogOpen] = useState(false);
-  const [editedTask, setEditedTask] = useState(null);
+  const { tasks, deleteTask, doneTask, updateTasks, setTasks } = useTaskContext();
+  const [isDialogOpen, setDialogOpen] = React.useState(false);
+  const [editedTask, setEditedTask] = React.useState(null);
 
   const ButtonAdd = () => {
     navigate("/AddTask");
@@ -35,8 +36,8 @@ const GeneralTasks = () => {
   };
 
   const handleEdit = (updatedTask) => {
-    updateTasks(updatedTask); // Chame a função updateTasks do contexto para atualizar as tarefas
-    closeEditDialog();
+    updateTasks(updatedTask);
+    setDialogOpen(false); // Feche o diálogo após a edição
   };
 
   return (
@@ -44,7 +45,10 @@ const GeneralTasks = () => {
       <h1>Minhas Tarefas</h1>
 
       {tasks.map((task) => (
-        <div key={task.id} className={`div-task ${task.completed ? "completed" : ""}`}>
+        <div
+          key={task.id}
+          className={`div-task ${task.completed ? "completed" : ""}`}
+        >
           <NewTask
             variant="task-todo"
             title={task.title}
@@ -79,8 +83,9 @@ const GeneralTasks = () => {
       <EditTaskDialog
         open={isDialogOpen}
         task={editedTask}
-        onClose={closeEditDialog}
         onSave={handleEdit}
+        onClose={closeEditDialog}
+        
       />
     </StylesGeneralTasks>
   );
