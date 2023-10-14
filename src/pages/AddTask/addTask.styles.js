@@ -6,7 +6,8 @@ export const StylesAddTask = styled.main`
     border: solid black 2px;
     border-radius: 12px;
     background-color: ${(props) => props.theme.grayLight};
-    padding: 30px;
+    padding: 10px 35px;
+    height: fit-content;
 
     .title {
         display: flex;
@@ -23,6 +24,7 @@ export const StylesAddTask = styled.main`
         color: ${(props) => props.theme.black};
         font: bold;
         background-color: transparent;
+        text-align: center;
     }
 
     .align-datetime {
