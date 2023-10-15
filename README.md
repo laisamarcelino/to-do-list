@@ -3,6 +3,10 @@ Projeto individual do Módulo 5 -> Criação de uma ferramenta para gerenciament
 
 **Sobre**: A ferramenta foi desenvolvida utilizando o Node.js, versão 18.17.1 e o framework React+Vite, versão 18.2.0 e 4.4.11 respectivamente, com o objetivo de permitir que o usuário gerencie suas tarefas adicionando, editando e marcando-as como concluídas.
 
+[Documentação-ViteJs](https://vitejs.dev/guide/)
+[Documentação-React](https://pt-br.react.dev/learn)
+
+
 ### Bibliotecas instaladas:
 
 * react-router-dom@6 -> Usada para gerenciar a navegação e as rotas em aplicativos da web React. Oferece roteamento declarativo, gestão de histórico e passagem de parâmetros pela URL.
