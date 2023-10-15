@@ -3,7 +3,7 @@ import { StylesFooter } from "./footer.styles";
 
 const Footer = () => {
     return (
-        <StylesFooter className="position-footer">
+        <StylesFooter>
             <section>
                 <p>© Copyright 2023 | Laisa Marcelino</p>
             </section>

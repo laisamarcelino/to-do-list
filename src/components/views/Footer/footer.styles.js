@@ -6,6 +6,7 @@ export const StylesFooter = styled.section`
     padding: 2%;
     bottom: 0;
     width: 100%;
+    margin-top: 35%;
 
     p {
         text-align: center;
