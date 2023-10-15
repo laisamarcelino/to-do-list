@@ -1,24 +1,15 @@
+// SearchTask.js
 import React, { useState } from "react";
 import { StyleSearch } from "./searchTask.styles";
 import icon_search from "/magnifying-glass.svg";
 import { useTaskContext } from "../TaskContent/TaskContent";
 import NewTask from "../../components/common/NewTask/NewTask";
-import Button from "../../components/common/Button/Button";
-import EditTaskDialog from "../EditTodo/EditTodo";
+import { Link } from "react-router-dom";
 
 const SearchTask = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const { searchTasks } = useTaskContext();
+  const { tasks, searchTasks } = useTaskContext();
   const [searchResults, setSearchResults] = useState([]);
-  const { tasks, deleteTask, doneTask } = useTaskContext();
-
-  const handleDelete = (taskId) => {
-    deleteTask(taskId);
-  };
-
-  const handleDone = (taskId) => {
-    doneTask(taskId);
-  };
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -28,6 +19,13 @@ const SearchTask = () => {
 
   const handleClearResults = () => {
     setSearchResults([]);
+  };
+
+  const handleScrollToTask = (taskId) => {
+    const element = document.getElementById(taskId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -50,10 +48,7 @@ const SearchTask = () => {
       </section>
 
       {searchResults.map((task) => (
-        <div
-          key={task.id}
-          className={`div-task ${task.completed ? "completed" : ""}`}
-        >
+        <div key={task.id} className="align-results">
           <NewTask
             variant="task-todo"
             title={task.title}
@@ -61,24 +56,20 @@ const SearchTask = () => {
             time={task.time}
             description={task.description}
           />
-          <Button
-            variant="primary"
-            texto="Concluída"
-            onClick={() => handleDone(task.id)}
-          />
-          <Button
-            variant="secondary"
-            texto="Editar"
-            onClick={() => openEditDialog(task)}
-          />
-          <Button
-            variant="third"
-            texto="Excluir"
-            onClick={() => handleDelete(task.id)}
-          />
+          <Link className="Link-task" to={`/#${task.id}`}>
+            <button
+              className="goto-task"
+              id={`goto-${task.id}`}
+              onClick={() => handleScrollToTask(task.id)}
+            >
+              Ir para a tarefa
+            </button>
+          </Link>
         </div>
       ))}
-      <button className="clean-results" onClick={handleClearResults}>Limpar respostas</button>
+      <button className="clean-results" onClick={handleClearResults}>
+        Limpar respostas
+      </button>
     </StyleSearch>
   );
 };

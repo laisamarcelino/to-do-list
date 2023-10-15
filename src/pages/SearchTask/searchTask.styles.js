@@ -5,7 +5,6 @@ export const StyleSearch = styled.main`
     display: flex;
     flex-direction: column;
     margin: 10px 10%;
-    
 
     section {
         display: flex;
@@ -39,14 +38,26 @@ export const StyleSearch = styled.main`
         background-color: ${(props) => props.theme.white};
     }
 
-    .div-task {
+    .align-results {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
-    .completed {
-        opacity: 0.7;
-        text-decoration: line-through;
+    .Link-task {
+        width: 20%;
+        height: 55px;
+        background-color: ${(props) => props.theme.jade};
+        border-radius: 12px;
+        justify-content: center;
+        display: flex;
+    }
+
+    .goto-task {
+        border: none;
+        background-color: transparent;
+        color: ${(props) => props.theme.white};
+        font-size: 15px;
+        font-family: "Montserrat", sans-serif;
     }
 
     .clean-results{
