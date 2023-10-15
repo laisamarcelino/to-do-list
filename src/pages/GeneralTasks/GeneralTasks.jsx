@@ -47,6 +47,7 @@ const GeneralTasks = () => {
       {tasks.map((task) => (
         <div
           key={task.id}
+          id={task.id}
           className={`div-task ${task.completed ? "completed" : ""}`}
         >
           <NewTask
